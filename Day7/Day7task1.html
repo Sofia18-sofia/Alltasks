@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXwzS0LJJHeqOxudEbixnAI2aNbOd3nuhMpQ&s'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(149, 132, 38, 0.7); /* Semi-transparent dark background */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #47fcff; /* A soft coral color for the header */
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #ffcc00; /* Bright yellow for labels */
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #f12c4d; /* Coral border color for input fields */
+            border-radius: 4px;
+            font-size: 14px;
+            background-color: #fff; /* White background for inputs */
+            color: #333; /* Dark text for input fields */
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #ff6347; /* Coral color for submit button */
+            color: #ffffff;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #47e56e; /* Darker shade of coral for hover effect */
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        /* Styling for better spacing */
+        form > * {
+            margin-bottom: 10px;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form action="sub.html" method="POST">
+            <label for="firstName">First Name:<span style="color: rgb(226, 41, 12);">*</span></label>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+
+            <label for="lastName">Last Name:<span style="color: red;">*</span></label>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+
+            <label for="email">Email Address:<span style="color: red;">*</span></label>
+            <input type="email" id="email" name="email" placeholder="example@example.com" required>
+
+            <label for="password">Password:<span style="color: red;">*</span></label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+
+            <label for="dob">Date of Birth:<span style="color: red;">*</span></label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="phone">Phone Number:<span style="color: red;">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+
+            <label>Gender:<span style="color: red;">*</span></label>
+            <input type="radio" id="male" name="male" value="Male" required> <label for="male">Male</label>
+            <input type="radio" id="female" name="female" value="Female" required> <label for="female">Female</label>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Your address" rows="4"></textarea>
+
+            <label for="linkedin">LinkedIn Profile:</label>
+            <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume">
+
+            <input type="submit" name="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
